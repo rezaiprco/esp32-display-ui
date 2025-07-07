@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ESP32 Telegram Display</title>
+  <title>ESP32 Telegram Chat</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="container">
-    <h1>📨 Telegram Message</h1>
-    <p id="message">Waiting...</p>
-  </div>
+  <div class="chat-container" id="chat"></div>
+
+  <template id="msg-template">
+    <div class="msg">
+      <div class="user-info"><span class="name"></span> <span class="username"></span></div>
+      <div class="text"></div>
+      <div class="reply-box">
+        <input type="text" placeholder="Type reply..." class="reply-input" />
+        <button class="reply-btn">Send</button>
+      </div>
+    </div>
+  </template>
+
   <script src="script.js"></script>
 </body>
 </html>
